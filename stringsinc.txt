@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+int main(){
+char g[] = "Hello World!";
+g[0] = 'J';
+printf("%s\n", g);
+char s[20];
+strcpy(s,g);
+char v[100];
+strcat(v,s);
+printf("%s\n",s);
+printf("%s",v);
+char *ptr=v;
+while(*ptr !='\0'){
+printf("%c",*ptr);
+ptr++;}
+int *pt=(int*)malloc(10*sizeof(int));
+for (int i=0;i<10;i++){
+scanf("%d",pt+i);}
+for (int i=0;i<10;i++){
+printf("%d",pt[i]);}
+free(ptr);
+free(pt);
+
+return 0;}
